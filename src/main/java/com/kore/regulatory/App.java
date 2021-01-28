@@ -1,16 +1,8 @@
 package com.kore.regulatory;
 
-import java.io.IOException;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 import com.kore.regulatory.section13F.Downloader;
-import com.kore.regulatory.section13F.PDFDownloader;
 import com.kore.regulatory.section13F.Parse13FPDF;
-import com.kore.utilities.FileWriting;
-import com.kore.utilities.PDFParser;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 //CUSIP Pattern: [0-9]{3}[a-zA-Z0-9]{2}[a-zA-Z0-9*@#][\s][a-zA-Z0-9*@#]{2}[\s][0-9]
 
