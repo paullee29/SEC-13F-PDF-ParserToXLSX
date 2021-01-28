@@ -13,7 +13,7 @@ public class App {
 		// load the spring configuration file
 
 		System.setProperty("javax.net.ssl.trustStore",
-				"C:\\Program Files\\Java\\jdk1.8.0_202\\jre\\lib\\security\\jssecacerts");
+				"C:\\Program Files\\Java\\jdk1.8.0_261\\jre\\lib\\security\\jssecacerts");
 		System.setProperty("javax.net.ssl.trustStorePassword", "changeit");
 
 		// Downloader

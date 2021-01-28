@@ -1,4 +1,6 @@
 com\kore\regulatory\section13F\PDFDownloader.class
 com\kore\regulatory\section13F\Downloader.class
+com\kore\regulatory\section13F\Model13F.class
 com\kore\regulatory\App.class
+com\kore\regulatory\section13F\Parse13FPDF.class
 com\kore\regulatory\MyLoggerConfig.class
