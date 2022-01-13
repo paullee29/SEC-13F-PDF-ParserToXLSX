@@ -1,11 +1,11 @@
-package com.kore.regulatory.test;
+package com.paukyducky.regulatory.test;
 
 import java.util.HashMap;
 import java.util.Map;
 
 
-import com.kore.regulatory.section13F.Model13F;
-import com.kore.regulatory.section13F.Parse13FPDF;
+import com.paukyducky.regulatory.section13F.Model13F;
+import com.paukyducky.regulatory.section13F.Parse13FPDF;
 
 public class Test1 {
 

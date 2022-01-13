@@ -17,7 +17,7 @@
 	<!-- Define your beans here -->
 	<!-- Logger Bean -->
 	<bean id="myLoggerConfig"
-		class="com.kore.regulatory.MyLoggerConfig" init-method="initLogger">
+		class="com.paukyducky.regulatory.MyLoggerConfig" init-method="initLogger">
 		<property name="rootLoggerLevel" value="FINE" />
 		<property name="printedLoggerLevel" value="FINE" />
 	</bean>
@@ -26,13 +26,13 @@
 
 	<!-- Define your beans here -->
 	<bean id="myDownloader"
-		class="com.kore.regulatory.section13F.PDFDownloader">
-		<property name="urlLink" value="${13F.urlLink}"/>
+		class="com.paukyducky.regulatory.section13F.PDFDownloader">
+<!--		<property name="urlLink" value="${13F.urlLink}"/>-->
 	</bean>
 
 
 	<bean id="myParse13FPDF"
-		class="com.kore.regulatory.section13F.Parse13FPDF">
+		class="com.paukyducky.regulatory.section13F.Parse13FPDF">
 		<property name="testFileName" value="${13F.testFileName}"/>
 	</bean>
 
