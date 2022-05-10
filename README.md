@@ -1,3 +1,14 @@
-Java app to download last quarter's 13F list PDF from SEC.gov. It then parses the pdf and put them into a text file using comma delineation that can be used in Excel to match against your holdings list.
 
-Please let me know if you encounter any issues.
+
+# SEC 13F PDF Parser
+
+## Overview
+Java app to download last quarter's 13F list PDF from SEC.gov. It then parses the pdf and put them into an Excel file to match against your holdings list.
+Dump data into the:
+
+![img.png](img.png)
+
+Ensure that the CUSIP format is not lost (it needs to be text).
+
+## Support
+Please enter an issue in the repo for any questions or problems.
