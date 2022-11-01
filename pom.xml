@@ -75,7 +75,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.kore.regulatory.App</mainClass>
+                            <mainClass>com.paukyducky.regulatory.App</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
@@ -102,7 +102,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.kore.regulatory.App</mainClass>
+                            <mainClass>com.paukyducky.regulatory.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

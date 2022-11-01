@@ -52,13 +52,15 @@ public class PDFDownloaderService implements DownloaderServiceInterface {
 		LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 		int year  = localDate.getYear();
 		int quarter = localDate.get(IsoFields.QUARTER_OF_YEAR);
-		if (quarter == 4) {
-			quarter = 1;
+		if (quarter == 1) {
+			year--;
+			quarter = 4;
 			year--;
 		} else {
 			quarter-=1;
 		}
 		urlLink = "https://www.sec.gov/files/investment/13flist" + year + "q" + quarter + ".pdf";
+		logger.info("URL Link: " + urlLink);
 	}
 	
 
