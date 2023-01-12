@@ -8,8 +8,6 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.temporal.IsoFields;
 import java.util.Date;
-
-import com.paukyducky.regulatory.ParserToXL.App;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -55,7 +53,6 @@ public class PDFDownloaderService implements DownloaderServiceInterface {
 		if (quarter == 1) {
 			year--;
 			quarter = 4;
-			year--;
 		} else {
 			quarter-=1;
 		}
