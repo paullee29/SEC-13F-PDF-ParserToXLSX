@@ -9,6 +9,11 @@ import java.time.ZoneId;
 import java.time.temporal.IsoFields;
 import java.util.Date;
 import org.apache.commons.io.FileUtils;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -31,17 +36,36 @@ public class PDFDownloaderService implements DownloaderServiceInterface {
 	private void fileDownloader () {
 
 		fileName = getFileName();
-		
+
+		CloseableHttpClient httpClient = HttpClients.createDefault();
+
+		HttpGet httpGet = new HttpGet(urlLink);
+		httpGet.addHeader("User-Agent", "Company CompanyEmail");
+		httpGet.addHeader("Accept-Encoding", "gzip, deflate");
+		httpGet.addHeader("Host", "www.sec.gov");
+
 		try {
 			logger.debug("Trying to download from: " + this.getClass().getName());
-			FileUtils.copyURLToFile(
-					  new URL(urlLink), 
-					  new File(fileName+".pdf") );
+
+
+			CloseableHttpResponse httpResponse = httpClient.execute(httpGet);
+			HttpEntity imageEntity = httpResponse.getEntity();
+
+			if (imageEntity != null) {
+				FileUtils.copyInputStreamToFile(imageEntity.getContent(), new File(fileName+".pdf"));
+			}
+
+
+//			FileUtils.copyURLToFile(
+//					  new URL(urlLink),
+//					  new File(fileName+".pdf") );
 		} catch (MalformedURLException e) {
 			logger.error("Error with URL: " + e);
 		} catch (IOException e) {
 			logger.error("Error with IOException: " + e);
 		}
+
+		httpGet.releaseConnection();
 	}
 
 	private void generateURLLink () {
